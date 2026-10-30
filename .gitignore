@@ -1,0 +1,23 @@
+# Generated reports and local preview/browser artifacts
+/output/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and editor files
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini

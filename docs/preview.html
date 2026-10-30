@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>技能清单</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f7f8fa;color:#18202d;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+main{max-width:1400px;margin:0 auto;padding:48px 56px 64px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:30px}
+h1{font-size:28px;line-height:1.3;font-weight:600;letter-spacing:-.6px;margin:0 0 8px}
+.home{margin:0;color:#858e9d;font-size:13px;overflow-wrap:anywhere}
+input{width:260px;max-width:100%;padding:10px 13px;border:1px solid #d8dde5;border-radius:8px;font:inherit;background:#fff;color:inherit;outline:none}
+input:focus-visible{border-color:#6d829c;box-shadow:0 0 0 2px #eef1f5}
+input::placeholder{color:#929aa7}
+.table-surface{background:#fff;border:1px solid #dfe4eb;border-radius:12px;overflow:auto;box-shadow:0 2px 6px #18202d03}
+table{width:100%;border-collapse:collapse;text-align:left;table-layout:auto}
+th{font-weight:600;font-size:13px;color:#596477;background:#f9fafb;padding:14px 24px;border-bottom:1px solid #e6e9ee}
+th:first-child{width:auto}
+th:nth-child(2),th:nth-child(3){width:1%;white-space:nowrap}
+td{padding:13px 24px;border-bottom:1px solid #edf0f4;vertical-align:middle;overflow-wrap:anywhere}
+td:first-child{font-weight:500;min-width:260px}
+td:nth-child(2),td:nth-child(3){white-space:nowrap;overflow-wrap:normal}
+.description{width:0;min-width:100%;margin-top:4px;color:#7b8493;font-size:12px;font-weight:400;line-height:1.6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+tbody tr:last-child td{border-bottom:0}
+td:nth-child(2),td:nth-child(3){font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+tbody tr:hover{background:#fafbfc}
+td:nth-child(3){color:#647084}
+.directory{display:inline-block;padding:3px 10px;border-radius:6px;background:hsl(var(--hue) 35% 94%);color:hsl(var(--hue) 45% 30%);font-size:12px;line-height:1.6}
+.target{display:table;max-width:100%;color:#9a580d;background:#fff7eb;border-radius:5px;padding:2px 7px;font-size:12px;margin-top:4px;overflow-wrap:anywhere}
+.target-label{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;font-size:11px;font-weight:600;white-space:nowrap;margin-right:4px}
+#empty{padding:32px 16px;color:#858e9d;text-align:center}
+aside{font-size:13px;color:#8a4e15;padding:12px 16px;margin-bottom:20px;background:#fff8ed;overflow-wrap:anywhere}
+aside ul{margin-bottom:0;padding-left:20px}
+[hidden]{display:none!important}
+@media(max-width:640px){main{padding:28px 18px}header{flex-direction:column;gap:18px;margin-bottom:24px}input{width:100%}h1{font-size:25px}th,td{padding:12px 8px}td:first-child{min-width:200px}td{font-size:13px}td:nth-child(2),td:nth-child(3){font-size:11px}.target{font-size:11px}}
+</style>
+</head>
+<body>
+<main>
+<header><div><h1>技能清单</h1><p class="home">~ = C:\Users\demo</p></div><input id="search" type="search" aria-label="搜索技能或路径" placeholder="搜索技能" autocomplete="off"></header>
+
+<div class="table-surface"><table aria-label="已安装技能"><thead><tr><th scope="col">技能名称</th><th scope="col">所属目录</th><th scope="col">路径</th></tr></thead><tbody><tr data-group=".codex" data-search="code-review 检查代码中的缺陷、边界情况与可维护性。 .codex C:\Users\demo\.codex\skills\code-review ~/.codex/skills/code-review C:\Users\demo\.codex\skills\code-review"><td>code-review<div class="description" title="检查代码中的缺陷、边界情况与可维护性。">检查代码中的缺陷、边界情况与可维护性。</div></td><td><span class="directory" style="--hue:265">.codex</span></td><td><span title="C:\Users\demo\.codex\skills\code-review">~/.codex/skills/code-review</span></td></tr><tr data-group=".cursor" data-search="design-notes 整理界面设计决策与组件使用规范。 .cursor C:\Users\demo\.cursor\skills\design-notes ~/.cursor/skills/design-notes C:\Users\demo\.cursor\skills\design-notes"><td>design-notes<div class="description" title="整理界面设计决策与组件使用规范。">整理界面设计决策与组件使用规范。</div></td><td><span class="directory" style="--hue:210">.cursor</span></td><td><span title="C:\Users\demo\.cursor\skills\design-notes">~/.cursor/skills/design-notes</span></td></tr><tr data-group=".agents" data-search="api-notes 从接口定义整理清晰的开发文档。 .agents C:\Users\demo\.agents\skills\api-notes ~/.agents/skills/api-notes C:\Users\demo\.agents\skills\api-notes"><td>api-notes<div class="description" title="从接口定义整理清晰的开发文档。">从接口定义整理清晰的开发文档。</div></td><td><span class="directory" style="--hue:158">.agents</span></td><td><span title="C:\Users\demo\.agents\skills\api-notes">~/.agents/skills/api-notes</span></td></tr><tr data-group=".agents" data-search="daily-summary 汇总当天工作，生成便于分享的简短记录。 .agents C:\Users\demo\.agents\skills\daily-summary ~/.agents/skills/daily-summary C:\Users\demo\.agents\skills\daily-summary"><td>daily-summary<div class="description" title="汇总当天工作，生成便于分享的简短记录。">汇总当天工作，生成便于分享的简短记录。</div></td><td><span class="directory" style="--hue:158">.agents</span></td><td><span title="C:\Users\demo\.agents\skills\daily-summary">~/.agents/skills/daily-summary</span></td></tr><tr data-group=".agents" data-search="list-installed-skills 盘点本机技能，生成可搜索的 HTML 清单。 .agents C:\Users\demo\.agents\skills\list-installed-skills ~/.agents/skills/list-installed-skills D:\projects\jan-skills\list-installed-skills"><td>list-installed-skills<div class="description" title="盘点本机技能，生成可搜索的 HTML 清单。">盘点本机技能，生成可搜索的 HTML 清单。</div></td><td><span class="directory" style="--hue:158">.agents</span></td><td><span title="C:\Users\demo\.agents\skills\list-installed-skills">~/.agents/skills/list-installed-skills</span><div class="target" title="软链接目标"><span class="target-label">软链接</span> ↳ D:\projects\jan-skills\list-installed-skills</div></td></tr><tr data-group=".agents" data-search="release-check 整理版本发布前需要检查的事项。 .agents C:\Users\demo\.agents\skills\release-check ~/.agents/skills/release-check C:\Users\demo\.agents\skills\release-check"><td>release-check<div class="description" title="整理版本发布前需要检查的事项。">整理版本发布前需要检查的事项。</div></td><td><span class="directory" style="--hue:158">.agents</span></td><td><span title="C:\Users\demo\.agents\skills\release-check">~/.agents/skills/release-check</span></td></tr><tr data-group=".agents" data-search="test-helper 为关键业务流程补充测试案例。 .agents C:\Users\demo\.agents\skills\test-helper ~/.agents/skills/test-helper C:\Users\demo\.agents\skills\test-helper"><td>test-helper<div class="description" title="为关键业务流程补充测试案例。">为关键业务流程补充测试案例。</div></td><td><span class="directory" style="--hue:158">.agents</span></td><td><span title="C:\Users\demo\.agents\skills\test-helper">~/.agents/skills/test-helper</span></td></tr></tbody></table></div>
+<p id="empty" role="status" hidden>未找到匹配的技能</p>
+</main>
+<script>
+const rows = [...document.querySelectorAll('tbody tr')];
+const empty = document.getElementById('empty');
+document.getElementById('search').addEventListener('input', event => {
+  const query = event.target.value.trim().toLocaleLowerCase();
+  let visible = 0;
+  for (const row of rows) {
+    row.hidden = !row.dataset.search.toLocaleLowerCase().includes(query);
+    if (!row.hidden) {
+      visible++;
+    }
+  }
+  empty.hidden = visible > 0;
+});
+</script>
+</body>
+</html>
