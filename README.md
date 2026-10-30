@@ -23,6 +23,18 @@
 
 ## 安装
 
+### 使用 skills CLI
+
+已安装 Node.js 并可使用 `npx` 时，运行：
+
+```sh
+npx skills add churjan/jan-skills --skill list-installed-skills
+```
+
+按提示选择要安装到的 Agent。
+
+### 手动安装
+
 下载本仓库 ZIP 并解压，或将仓库克隆到本地。**复制整个 `list-installed-skills` 文件夹**，不要只复制 `SKILL.md`，脚本和 HTML 模板也需要一起安装。
 
 例如，将技能复制到用户级共享技能目录：
